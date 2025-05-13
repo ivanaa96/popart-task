@@ -1,0 +1,19 @@
+$primary: #361281;
+$accent: #ffd700;
+$blur-bg: rgba(42, 0, 126, 0.7);
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: $primary;
+  color: yellow;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background-color: $blur-bg;
+  z-index: 999;
+  padding: 1rem;
+}
