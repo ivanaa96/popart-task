@@ -6,7 +6,7 @@ const autoprefixer = require("autoprefixer");
 
 gulp.task("sass", () => {
   return gulp
-    .src("./src/scss/**/*.scss")
+    .src("./src/scss/*.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest("./src/css"))
