@@ -1,0 +1,80 @@
+.cta {
+  padding: 5rem 2rem 8rem 2rem;
+  position: relative;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__text {
+    margin-bottom: 4rem;
+    position: relative;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__highlight {
+    color: $color-accent-yellow;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 13rem;
+    width: 70px;
+
+    @media (max-width: $breakpoint-md) {
+      position: static;
+      display: block;
+      margin: 1rem auto 0;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 1000px;
+    height: 615px;
+
+    @media (max-width: $breakpoint-lg) {
+      width: 650px;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      width: 450px;
+    }
+
+    @media (max-width: $breakpoint-sm) {
+      width: 100%;
+    }
+
+    .cta__cluster-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    padding: 1rem;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+  }
+
+  &__center-arrow {
+    position: absolute;
+    top: 52%;
+    left: calc(50% + 70px);
+    width: 40px;
+  }
+}

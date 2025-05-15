@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PopArt Studio - Frontend task</title>
+    <title>PopArt Studio | Frontend Development Task</title>
+
+    <meta
+      name="description"
+      content="PopArt Studio frontend task showcasing semantic HTML, accessibility, and responsive design."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="PopArt Studio" />
+
+    <meta property="og:title" content="PopArt Studio | Frontend Task" />
+    <meta
+      property="og:description"
+      content="Frontend task by PopArt Studio using semantic HTML and SEO-friendly practices."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.popartstudio.com/" />
+
+    <link rel="canonical" href="https://www.popartstudio.com/" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
@@ -13,7 +31,11 @@
   </head>
   <body>
     <header class="site-header" role="banner">
-      <img src="public/icons/logo.svg" alt="Logo" class="site-header__logo" />
+      <img
+        src="public/icons/logo.svg"
+        alt="PopArt Studio Logo"
+        class="site-header__logo"
+      />
       <nav class="site-header__nav" aria-label="Main navigation">
         <a href="#">Home</a>
         <span aria-hidden="true">|</span>
@@ -21,451 +43,599 @@
       </nav>
     </header>
 
-    <section class="hero">
-      <aside class="hero__sidebar">
-        <img src="public/icons/links.svg" alt="Sidebar icons" />
-      </aside>
+    <aside class="social-sidebar" aria-label="Social media links">
+      <ul>
+        <li>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <img src="public/icons/github-icon.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://discord.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Discord"
+          >
+            <img src="public/icons/gamepad.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://stackoverflow.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Stack Overflow"
+          >
+            <img src="public/icons/stackoverflow-icon.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://reddit.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Reddit"
+          >
+            <img src="public/icons/reddit.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://quora.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Quora"
+          >
+            <img src="public/icons/quora-icon.svg" alt="" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+          >
+            <img src="public/icons/youtube-icon.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+    </aside>
 
-      <main class="hero__content">
-        <div class="hero__left">
-          <h1 class="hero__title">
-            LOREM IPSUM DOLOR SIT AMET
-            <span class="hero__highlight">CONSECTETUR.</span>
-          </h1>
-        </div>
-        <div class="hero__right">
-          <p class="hero__description">
+    <main class="main-content" id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="hero__heading">
+          LOREM IPSUM DOLOR SIT AMET
+          <span class="hero__highlight">CONSECTETUR.</span>
+        </h1>
+
+        <div id="hero-description">
+          <p class="hero__text">
             Lorem ipsum dolor sit amet consectetur. Vestibulum enim aenean purus
             nam quis.
           </p>
-          <button class="hero__cta-button">JOIN</button>
+          <button class="hero__cta" aria-label="Join our network">JOIN</button>
         </div>
 
-        <!-- TODO: ICONS -->
-        <aside class="hero__decor" aria-hidden="true">
+        <div class="hero__decorations" aria-hidden="true">
           <img
             src="public/icons/octagon-filled.svg"
-            alt=""
-            class="hero__icon-top"
-            aria-hidden="true"
+            class="hero__decor--center-top"
+            role="presentation"
           />
           <img
             src="public/icons/node1.svg"
-            alt=""
-            class="hero__hex-bottom"
-            aria-hidden="true"
+            class="hero__decor--bottom"
+            role="presentation"
           />
           <img
             src="public/icons/octagon-outline.svg"
-            alt=""
-            class="hero__hex-near-button"
-            aria-hidden="true"
+            class="hero__decor--near-cta"
+            role="presentation"
           />
           <img
             src="public/icons/decor-dots-pink.svg"
-            alt=""
-            class="hero__dots-left"
-            aria-hidden="true"
+            class="hero__decor--corner-left"
+            role="presentation"
           />
           <img
             src="public/icons/arrows.svg"
-            alt=""
-            class="hero__arrows"
-            aria-hidden="true"
+            class="hero__decor--bottom-center"
+            role="presentation"
           />
-        </aside>
-      </main>
-    </section>
-
-    <section class="showcase" id="showcase">
-      <img
-        src="public/images/code-screenshot.jpg"
-        alt="Code screenshot"
-        class="showcase__image"
-      />
-      <!-- CHANGE ALT -->
-      <img
-        src="public/icons/decor-octagon-strip.svg"
-        alt="Blue dots"
-        class="showcase__dots"
-      />
-    </section>
-
-    <section class="about" id="about">
-      <div class="about__content">
-        <div class="about__text-block">
-          <h2 class="about__title">
-            <span class="about__highlight">IPSUM</span> DOLOR SIT
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Ultrices in justo sit
-            tincidunt lacinia id auctor eros dignissim. In id nec netus sagittis
-            ornare duis turpis. Enim pellentesque suscipit ante nec vestibulum
-            proin eget viverra. Eget vehicula massa urna tristique rhoncus ut.
-            Cursus non pretium aliquet ipsum gravida fames aliquet. Egestas eget
-            in congue augue. Sed arcu condimentum varius vitae cursus. Quis non
-            tellus id faucibus. Augue nec aliquam varius mauris mauris tortor.
-            Mauris odio a ultrices porttitor amet at.
-          </p>
-          <p>
-            Eget vehicula massa urna tristique rhoncus ut. Cursus non pretium
-            aliquet ipsum gravida fames aliquet. Egestas eget in congue augue.
-          </p>
         </div>
-        <img
-          src="public/icons/arrows.svg"
-          alt=""
-          class="about__arrow"
-          aria-hidden="true"
-        />
+      </section>
 
-        <img
-          src="public/icons/node3.svg"
-          alt=""
-          class="about__node"
-          aria-hidden="true"
-        />
-      </div>
-    </section>
+      <section
+        class="showcase"
+        id="showcase"
+        aria-labelledby="showcase-heading"
+      >
+        <h2 id="showcase-heading" class="visually-hidden">Showcase Example</h2>
 
-    <section class="process" id="process">
-      <img
-        src="public/icons/decor-dots-orange.svg"
-        alt="Orange dots"
-        class=""
-      />
-      <img src="public/icons/timeline.svg" alt="Timeline Image" class="" />
-      <img
-        src="public/icons/octagon-outline.svg"
-        class=""
-        alt=""
-        aria-hidden="true"
-      />
-    </section>
-
-    <section class="why-us" id="why-us">
-      <h2 class="why-us__title">
-        <span class="why-us__highlight">WHY</span> US?
-      </h2>
-
-      <div class="why-us__grid">
-        <div class="why-us__item">
-          <h3>Lorem adipiscing eleifend</h3>
-          <p>
-            Tortor habitant turpis eu maecenas id nisi in blandit rhoncus.
-            Turpis hac in eu volutpat lorem nullam mattis
-          </p>
-        </div>
-        <div class="why-us__item">
-          <h3>Tristique neque tristique</h3>
-          <p>
-            Dapibus orci bibendum posuere viverra nibh augue ornare. Dolor sed
-            rutrum quam non viverra proin sed nisi.
-          </p>
-        </div>
-        <div class="why-us__item">
-          <h3>Natoque purus adipiscing</h3>
-          <p>
-            Pellentesque tempor ante felis leo aenean purus neque sit.
-            Scelerisque feugiat aliquam eget imperdiet!
-          </p>
-        </div>
-        <div class="why-us__item">
-          <h3>Ut velit sit</h3>
-          <p>
-            Dictum amet est quis at aenean neque. Metus viverra vulputate
-            faucibus quam sed habitasse auctor
-          </p>
-        </div>
-        <div class="why-us__item">
-          <h3>Nunc id eget</h3>
-          <p>
-            Luctus metus condimentum tincidunt commodo non facilisis. Quis diam
-            eu in platea a purus nisl magna
-          </p>
-        </div>
-        <div class="why-us__item">
-          <h3>Et tempor sit</h3>
-          <p>
-            In mauris aliquam mauris turpis morbi morbi quis. Adipiscing velit
-            mauris netus quisque et tortor massa sit
-          </p>
-        </div>
-      </div>
-
-      <!-- CHECK THIS -->
-      <img
-        src="public/icons/octagon-group.svg"
-        alt=""
-        class="why-us__decoration why-us__decoration--top-right"
-      />
-      <img
-        src="public/icons/node2.svg"
-        alt=""
-        class="why-us__decoration why-us__decoration--bottom-left"
-      />
-
-      <img
-        src="public/icons/decor-octagon-grid.svg"
-        alt=""
-        class="why-us__decoration why-us__decoration--right"
-      />
-    </section>
-
-    <section class="founder" id="founder">
-      <img
-        src="public/icons/arrows.svg"
-        alt=""
-        class="founder__arrows"
-        aria-hidden="true"
-      />
-      <div class="founder__content">
-        <div class="founder__media">
+        <div class="showcase__content">
           <img
-            src="public/images/bogdan2.svg"
-            alt="Portrait of the founder"
-            class="founder__photo"
+            src="public/images/code-screenshot.jpg"
+            alt="Frontend code snippet demonstrating component structure"
+            class="showcase__image"
           />
 
           <img
-            src="public/icons/octagon-group2.svg"
+            src="public/icons/decor-octagon-strip.svg"
             alt=""
-            class="founder__decor founder__decor--cluster"
-            aria-hidden="true"
+            role="presentation"
+            class="showcase__dots"
           />
         </div>
+      </section>
 
-        <div class="founder__text">
-          <h2 class="founder__name">Name Lastname PhD</h2>
-          <p class="founder__title">Our Founder</p>
-          <blockquote class="founder__quote">
-            <span class="founder__quote-icon">❝</span>
-            Ultrices amet in a duis viverra nullam et. Amet nunc sed dignissim
-            mus cras. Fringilla molestie turpis neque leo viverra magna. Aliquam
-            sociis proin nulla gravida. Id ac id nisi quis pulvinar. Pulvinar
-            massa aenean hendrerit purus aliquet. Odio nunc turpis quis habitant
-            elementum habitasse venenatis vestibulum. Dui arcu id sagittis enim
-            sagittis in enim dignissim. Tincidunt commodo mollis amet mollis. Ut
-            consectetur metus lectus quam ultrices consectetur adipiscing.
-          </blockquote>
+      <section class="about" id="about" aria-labelledby="about-heading">
+        <div class="about__content">
+          <div class="about__text-block">
+            <h2 id="about-heading" class="about__title">
+              <span class="about__highlight">IPSUM</span> DOLOR SIT
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Ultrices in justo sit
+              tincidunt lacinia id auctor eros dignissim. In id nec netus
+              sagittis ornare duis turpis. Enim pellentesque suscipit ante nec
+              vestibulum proin eget viverra. Eget vehicula massa urna tristique
+              rhoncus ut. Cursus non pretium aliquet ipsum gravida fames
+              aliquet. Egestas eget in congue augue. Sed arcu condimentum varius
+              vitae cursus. Quis non tellus id faucibus. Augue nec aliquam
+              varius mauris mauris tortor. Mauris odio a ultrices porttitor amet
+              at.
+            </p>
+            <p>
+              Eget vehicula massa urna tristique rhoncus ut. Cursus non pretium
+              aliquet ipsum gravida fames aliquet. Egestas eget in congue augue.
+            </p>
+          </div>
+
+          <img
+            src="public/icons/arrows.svg"
+            alt=""
+            class="about__arrow"
+            role="presentation"
+          />
+
+          <img
+            src="public/icons/node3.svg"
+            alt=""
+            class="about__node"
+            role="presentation"
+          />
         </div>
+      </section>
+
+      <section class="process" id="process" aria-labelledby="process-heading">
+        <h2 id="process-heading" class="visually-hidden">
+          Our Workflow Process
+        </h2>
+
+        <img
+          src="public/icons/decor-dots-orange.svg"
+          alt=""
+          role="presentation"
+          class="process__dots"
+        />
+
+        <img
+          src="public/icons/timeline.svg"
+          alt="Timeline showing our development process"
+          class="process__timeline"
+        />
 
         <img
           src="public/icons/octagon-outline.svg"
           alt=""
-          class="founder__decor founder__decor--corner"
-          aria-hidden="true"
+          role="presentation"
+          class="process__icon"
         />
-      </div>
-    </section>
+      </section>
 
-    <section class="contributors" id="contributors">
-      <h2 class="contributors__title">Contributors</h2>
-
-      <div class="contributors__grid">
-        <div class="contributors__item">
-          <img
-            src="public/images/dejan-markovic.svg"
-            alt="Quisque lectus"
-            class="contributors__photo"
-          />
-          <p class="contributors__name"><span>Quisque</span> lectus</p>
-          <p class="contributors__role">Professor at UCLA</p>
-        </div>
-
-        <div class="contributors__item">
-          <img
-            src="public/images/Andrea-Erdeljan.svg"
-            alt="Arcu eget"
-            class="contributors__photo"
-          />
-          <p class="contributors__name"><span>Arcu</span> eget</p>
-          <p class="contributors__role">Verification Engineer</p>
-        </div>
-
-        <div class="contributors__item">
-          <img
-            src="public/images/Stefan-sredojevic.svg"
-            alt="Dui faucibus"
-            class="contributors__photo"
-          />
-          <p class="contributors__name"><span>Dui</span> faucibus</p>
-          <p class="contributors__role">Co-founder and COO at Anari AI</p>
-        </div>
-
-        <div class="contributors__item">
-          <img
-            src="public/images/Tim-Ling.svg"
-            alt="Tempus cursus"
-            class="contributors__photo"
-          />
-          <p class="contributors__name"><span>Tempus</span> cursus</p>
-          <p class="contributors__role">Student at UCLA</p>
-        </div>
-
-        <div class="contributors__item">
-          <img
-            src="public/images/kozomora.svg"
-            alt="Maecenas id"
-            class="contributors__photo"
-          />
-          <p class="contributors__name"><span>Maecenas</span> id</p>
-          <p class="contributors__role">Verification Engineer</p>
-        </div>
-
-        <div class="contributors__item contributors__item--cta">
-          <img
-            src="public/images/Vector 8.svg"
-            alt="Join the community"
-            class="contributors__photo contributors__photo--silhouette"
-          />
-          <p class="contributors__name"><span>Enim</span> adipiscing</p>
-          <a href="#" class="contributors__button">JOIN THE COMMUNITY</a>
-        </div>
-      </div>
-
-      <p class="contributors__footer">
-        …and <strong>20+</strong> people designing<br />
-        the future.
-      </p>
-    </section>
-
-    <section class="cta" id="join-network">
-      <img
-        src="public/icons/decor-dots-pink.svg"
-        alt=""
-        class="cta__decor cta__decor--dots-top-left"
-      />
-
-      <div class="cta__container">
-        <div class="cta__text">
-          <h2 class="cta__heading">
-            <span class="cta__highlight">Start Today</span> –<br />
-            Join the Network
-          </h2>
-          <img src="public/icons/node1.svg" alt="" class="cta__node" />
-
-          <img src="public/icons/arrows.svg" alt="" class="cta__arrow" />
-        </div>
-
-        <div class="cta__cluster">
-          <img src="public/icons/cta-group.svg" />
-        </div>
-      </div>
-
-      <img
-        src="public/icons/decor-dots-orange.svg"
-        alt=""
-        class="cta__decor cta__decor--dots-bottom-right"
-      />
-    </section>
-
-    <section class="workflow" id="workflow">
-      <div class="workflow__header">
-        <img
-          src="public/icons/node3.svg"
-          alt=""
-          aria-hidden="true"
-          class="workflow__node"
-        />
-        <h2 class="workflow__title">
-          INTRODUCTION TO <br />
-          <span class="workflow__highlight">OUR WORKFLOW</span>
+      <section class="why-us" id="why-us" aria-labelledby="why-us-heading">
+        <h2 id="why-us-heading" class="why-us__title">
+          <span class="why-us__highlight">WHY</span> US?
         </h2>
+
+        <div class="why-us__grid">
+          <article class="why-us__item">
+            <h3>Lorem adipiscing eleifend</h3>
+            <p>
+              Tortor habitant turpis eu maecenas id nisi in blandit rhoncus.
+              Turpis hac in eu volutpat lorem nullam mattis
+            </p>
+          </article>
+
+          <article class="why-us__item">
+            <h3>Tristique neque tristique</h3>
+            <p>
+              Dapibus orci bibendum posuere viverra nibh augue ornare. Dolor sed
+              rutrum quam non viverra proin sed nisi.
+            </p>
+          </article>
+
+          <article class="why-us__item">
+            <h3>Natoque purus adipiscing</h3>
+            <p>
+              Pellentesque tempor ante felis leo aenean purus neque sit.
+              Scelerisque feugiat aliquam eget imperdiet!
+            </p>
+          </article>
+
+          <article class="why-us__item">
+            <h3>Ut velit sit</h3>
+            <p>
+              Dictum amet est quis at aenean neque. Metus viverra vulputate
+              faucibus quam sed habitasse auctor
+            </p>
+          </article>
+
+          <article class="why-us__item">
+            <h3>Nunc id eget</h3>
+            <p>
+              Luctus metus condimentum tincidunt commodo non facilisis. Quis
+              diam eu in platea a purus nisl magna
+            </p>
+          </article>
+
+          <article class="why-us__item">
+            <h3>Et tempor sit</h3>
+            <p>
+              In mauris aliquam mauris turpis morbi morbi quis. Adipiscing velit
+              mauris netus quisque et tortor massa sit
+            </p>
+          </article>
+        </div>
+
         <img
-          src="public/icons/octagon-filled.svg"
+          src="public/icons/octagon-group.svg"
           alt=""
-          aria-hidden="true"
-          class="workflow__octagon-filled"
+          role="presentation"
+          class="why-us__decoration why-us__decoration--middle-node"
         />
-      </div>
-
-      <div class="workflow__video-container">
-        <img
-          src="public/images/video.svg"
-          alt="Intro video"
-          class="workflow__video"
-        />
-      </div>
-    </section>
-
-    <section class="news" id="news">
-      <img
-        src="public/icons/decor-octagon-strip.svg"
-        alt=""
-        aria-hidden="true"
-      />
-      <img src="public/icons/arrows.svg" alt="" aria-hidden="true" />
-
-      <img src="public/icons/node4.svg" alt="" aria-hidden="true" />
-      <h2 class="news__title">LATEST NEWS</h2>
-
-      <div class="news__grid">
-        <article class="news__item">
-          <img
-            src="public/images/news-image.jpg"
-            alt="News"
-            class="news__image"
-          />
-          <div class="news__meta">
-            <span class="news__date">13 Feb 2022</span>
-            <h3 class="news__headline">Eu hac a ridiculus velit, ma...</h3>
-            <p class="news__excerpt">
-              Vel arcu, cras eget turpis tortor tristique egestas. Volutpat
-              semper proin quisque arcu, cras eget turpis tortor tristique
-              egestas quisqu...
-            </p>
-            <a href="#" class="news__read-more">READ MORE</a>
-          </div>
-        </article>
-
-        <article class="news__item">
-          <img
-            src="public/images/news-image.jpg"
-            alt="News"
-            class="news__image"
-          />
-          <div class="news__meta">
-            <span class="news__date">13 Feb 2022</span>
-            <h3 class="news__headline">Eu hac a ridiculus velit, ma...</h3>
-            <p class="news__excerpt">
-              Vel arcu, cras eget turpis tortor tristique egestas. Volutpat
-              semper proin quisque arcu, cras eget turpis tortor tristique
-              egestas quisqu...
-            </p>
-            <a href="#" class="news__read-more">READ MORE</a>
-          </div>
-        </article>
-      </div>
-
-      <div class="news__footer">
-        <a href="#" class="news__button">VIEW ALL NEWS</a>
         <img
           src="public/icons/node2.svg"
           alt=""
-          class="news__decoration-left"
+          role="presentation"
+          class="why-us__decoration why-us__decoration--bottom-node"
         />
+        <img
+          src="public/icons/decor-octagon-grid.svg"
+          alt=""
+          role="presentation"
+          class="why-us__decoration why-us__decoration--right-dots"
+        />
+      </section>
+
+      <section class="founder" id="founder" aria-labelledby="founder-heading">
+        <h2 id="founder-heading" class="visually-hidden">Meet the Founder</h2>
+
         <img
           src="public/icons/arrows.svg"
           alt=""
-          class="news__decoration-bottom"
+          role="presentation"
+          class="founder__arrows"
         />
-      </div>
-    </section>
 
-    <footer class="site-footer" id="site-footer">
-      <div class="site-footer__content">
-        <div class="site-footer__logo">
-          <img src="public/icons/logo.svg" alt="Logo" />
+        <div class="founder__content">
+          <div class="founder__media">
+            <img
+              src="public/images/bogdan2.svg"
+              alt="Portrait of the founder"
+              class="founder__photo"
+            />
+
+            <img
+              src="public/icons/octagon-group2.svg"
+              alt=""
+              role="presentation"
+              class="founder__decor founder__decor--cluster"
+            />
+          </div>
+
+          <div class="founder__text">
+            <p class="founder__name">Name Lastname, PhD</p>
+            <p class="founder__title">Our Founder</p>
+            <blockquote class="founder__quote">
+              <span class="founder__quote-icon" aria-hidden="true">❝</span>
+              Ultrices amet in a duis viverra nullam et. Amet nunc sed dignissim
+              mus cras. Fringilla molestie turpis neque leo viverra magna.
+              Aliquam sociis proin nulla gravida. Id ac id nisi quis pulvinar.
+              Pulvinar massa aenean hendrerit purus aliquet. Odio nunc turpis
+              quis habitant elementum habitasse venenatis vestibulum. Dui arcu
+              id sagittis enim sagittis in enim dignissim. Tincidunt commodo
+              mollis amet mollis. Ut consectetur metus lectus quam ultrices
+              consectetur adipiscing.
+            </blockquote>
+          </div>
+
+          <img
+            src="public/icons/octagon-outline.svg"
+            alt=""
+            role="presentation"
+            class="founder__decor founder__decor--corner"
+          />
+        </div>
+      </section>
+
+      <section
+        class="contributors"
+        id="contributors"
+        aria-labelledby="contributors-heading"
+      >
+        <h2 id="contributors-heading" class="contributors__title">
+          Contributors
+        </h2>
+
+        <div class="contributors__grid">
+          <article class="contributors__item">
+            <img
+              src="public/images/dejan-markovic.svg"
+              alt="Portrait of Quisque Lectus"
+              class="contributors__photo"
+            />
+            <p class="contributors__name"><span>Quisque</span> Lectus</p>
+            <p class="contributors__role">Professor at UCLA</p>
+          </article>
+
+          <article class="contributors__item">
+            <img
+              src="public/images/Andrea-Erdeljan.svg"
+              alt="Portrait of Arcu Eget"
+              class="contributors__photo"
+            />
+            <p class="contributors__name"><span>Arcu</span> Eget</p>
+            <p class="contributors__role">Verification Engineer</p>
+          </article>
+
+          <article class="contributors__item">
+            <img
+              src="public/images/Stefan-sredojevic.svg"
+              alt="Portrait of Dui Faucibus"
+              class="contributors__photo"
+            />
+            <p class="contributors__name"><span>Dui</span> Faucibus</p>
+            <p class="contributors__role">Co-founder and COO at Anari AI</p>
+          </article>
+
+          <article class="contributors__item">
+            <img
+              src="public/images/Tim-Ling.svg"
+              alt="Portrait of Tempus Cursus"
+              class="contributors__photo"
+            />
+            <p class="contributors__name"><span>Tempus</span> Cursus</p>
+            <p class="contributors__role">Student at UCLA</p>
+          </article>
+
+          <article class="contributors__item">
+            <img
+              src="public/images/kozomora.svg"
+              alt="Portrait of Maecenas Id"
+              class="contributors__photo"
+            />
+            <p class="contributors__name"><span>Maecenas</span> Id</p>
+            <p class="contributors__role">Verification Engineer</p>
+          </article>
+
+          <article class="contributors__item contributors__item--cta">
+            <img
+              src="public/images/Vector 8.svg"
+              alt=""
+              role="presentation"
+              class="contributors__photo contributors__photo--silhouette"
+            />
+            <p class="contributors__name"><span>Enim</span> Adipiscing</p>
+            <a
+              href="#"
+              class="contributors__button"
+              aria-label="Join the contributors community"
+              >JOIN THE COMMUNITY</a
+            >
+          </article>
         </div>
 
-        <div class="site-footer__nav">
+        <p class="contributors__footer-text">
+          …and <strong>20+</strong> people designing<br />
+          the future.
+        </p>
+
+        <div class="contributors__footer-icons">
+          <img
+            src="public/icons/decor-dots-pink.svg"
+            alt=""
+            role="presentation"
+            class="contributors__dots-bottom"
+          />
+          <img
+            src="public/icons/node1.svg"
+            alt=""
+            role="presentation"
+            class="contributors__node"
+          />
+        </div>
+      </section>
+
+      <section class="cta" id="cta" aria-labelledby="cta-heading">
+        <h2 id="cta-heading" class="visually-hidden">
+          Join the Network Call To Action
+        </h2>
+
+        <div class="cta__container">
+          <div class="cta__text">
+            <h3 class="cta__heading">
+              <span class="cta__highlight">Start Today</span> –<br />
+              Join the Network
+            </h3>
+
+            <img
+              src="public/icons/arrows.svg"
+              alt=""
+              role="presentation"
+              class="cta__arrow"
+            />
+          </div>
+
+          <div class="cta__cluster">
+            <img
+              src="public/icons/cta-group.svg"
+              alt="Visual illustration of community connection"
+              class="cta__image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="workflow"
+        id="workflow"
+        aria-labelledby="workflow-heading"
+      >
+        <img
+          src="public/icons/node3.svg"
+          alt=""
+          role="presentation"
+          class="workflow__node"
+        />
+        <div>
+          <div class="workflow__header">
+            <h2 class="workflow__title" id="workflow-heading">
+              INTRODUCTION TO <br />
+              OUR WORKFLOW
+            </h2>
+
+            <img
+              src="public/icons/octagon-filled.svg"
+              alt=""
+              role="presentation"
+              class="workflow__octagon-filled"
+            />
+            <img
+              src="public/icons/decor-dots-orange.svg"
+              alt=""
+              role="presentation"
+              class="workflow__dots-top"
+            />
+          </div>
+
+          <div class="workflow__video-container">
+            <img
+              src="public/images/video.svg"
+              alt="Illustration representing an overview video of the workflow"
+              class="workflow__video"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="news" id="news" aria-labelledby="news-heading">
+        <div class="news__icons">
+          <img
+            src="public/icons/decor-octagon-strip.svg"
+            alt=""
+            role="presentation"
+          />
+          <img src="public/icons/node4.svg" alt="" role="presentation" />
+        </div>
+        <div class="news__content">
+          <img src="public/icons/arrows.svg" alt="" role="presentation" />
+          <h2 id="news-heading" class="news__title">LATEST NEWS</h2>
+
+          <div class="news__grid">
+            <article class="news__item">
+              <img
+                src="public/images/news-image.jpg"
+                alt="Article image for: Eu hac a ridiculus velit, ma..."
+                class="news__image"
+              />
+              <div class="news__meta">
+                <span class="news__date">13 Feb 2022</span>
+                <h3 class="news__headline">Eu hac a ridiculus velit, ma...</h3>
+                <p class="news__excerpt">
+                  Vel arcu, cras eget turpis tortor tristique egestas. Volutpat
+                  semper proin quisque arcu, cras eget turpis tortor tristique
+                  egestas quisqu...
+                </p>
+                <a
+                  href="#"
+                  class="news__read-more"
+                  aria-label="Read full article: Eu hac a ridiculus velit, ma..."
+                  >READ MORE</a
+                >
+              </div>
+            </article>
+
+            <article class="news__item">
+              <img
+                src="public/images/news-image.jpg"
+                alt="Article image for: Eu hac a ridiculus velit, ma..."
+                class="news__image"
+              />
+              <div class="news__meta">
+                <span class="news__date">13 Feb 2022</span>
+                <h3 class="news__headline">Eu hac a ridiculus velit, ma...</h3>
+                <p class="news__excerpt">
+                  Vel arcu, cras eget turpis tortor tristique egestas. Volutpat
+                  semper proin quisque arcu, cras eget turpis tortor tristique
+                  egestas quisqu...
+                </p>
+                <a
+                  href="#"
+                  class="news__read-more"
+                  aria-label="Read full article: Eu hac a ridiculus velit, ma..."
+                  >READ MORE</a
+                >
+              </div>
+            </article>
+          </div>
+             <a href="#" class="news__button" aria-label="View all news articles"
+            >VIEW ALL NEWS</a
+          >
+        </div>
+
+
+        <div class="news__footer">
+          <img
+            src="public/icons/node2.svg"
+            alt=""
+            role="presentation"
+            class="news__decoration-left"
+          />
+          <img
+            src="public/icons/arrows.svg"
+            alt=""
+            role="presentation"
+            class="news__decoration-bottom"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="site-footer"
+      id="site-footer"
+      aria-labelledby="footer-heading"
+    >
+      <h2 id="footer-heading" class="visually-hidden">Footer</h2>
+
+      <div class="site-footer__content">
+          <img src="public/icons/logo.svg" class="site-footer__logo" alt="PopArt Studio Logo" />
+
+        <nav class="site-footer__nav" aria-label="Footer navigation">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Documentation</a></li>
             <li><a href="#">Start today</a></li>
           </ul>
-        </div>
+        </nav>
 
         <div class="site-footer__social">
           <ul>
@@ -476,7 +646,7 @@
             </li>
             <li>
               <a href="#"
-                ><img src="public/icons/gamepad.svg" alt="Gamepad"
+                ><img src="public/icons/gamepad.svg" alt="Discord"
               /></a>
             </li>
             <li>
@@ -491,7 +661,7 @@
             </li>
             <li>
               <a href="#"
-                ><img src="public/icons/quora-icon.svg" alt="Search"
+                ><img src="public/icons/quora-icon.svg" alt="Quora"
               /></a>
             </li>
             <li>
@@ -501,17 +671,17 @@
             </li>
           </ul>
         </div>
+        <img
+          src="public/icons/decor-octagon-black.svg"
+          alt=""
+          role="presentation"
+          class="site-footer__octagon-black"
+        />
       </div>
 
       <p class="site-footer__credit">
         Design and development by PopArt Studio.
       </p>
-
-      <img
-        src="public/icons/decor-octagon-black.svg"
-        alt=""
-        class="site-footer__octagon-black"
-      />
     </footer>
 
     <script src="js/main.js"></script>

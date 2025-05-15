@@ -1,0 +1,36 @@
+.site-header {
+  display: flex;
+  background-color: $color-primary;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 1rem 9rem;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $breakpoint-md) {
+    padding: 1rem 2rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0.5rem 1rem;
+  }
+
+  &__logo {
+    height: 40px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+
+    a,
+    span {
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+}

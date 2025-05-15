@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: $color-primary;
+  color: $color-white;
+  overflow-x: hidden;
+}
+
+.main-content {
+  padding: 1.5rem 4.5rem;
+  @media (max-width: $breakpoint-md) {
+    padding: 1rem 2rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0.5rem 1rem;
+  }
+}

@@ -1,19 +1,18 @@
-$primary: #361281;
-$accent: #ffd700;
-$blur-bg: rgba(42, 0, 126, 0.7);
+@import '_variables.scss';
+@import 'base';
+@import 'utilities';
 
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  background-color: $primary;
-  color: yellow;
-}
+@import 'site-header';
+@import 'site-footer';
+@import 'social-sidebar';
 
-header {
-  position: sticky;
-  top: 0;
-  backdrop-filter: blur(8px);
-  background-color: $blur-bg;
-  z-index: 999;
-  padding: 1rem;
-}
+@import 'hero';
+@import 'showcase';
+@import 'about';
+@import 'process';
+@import 'why-us';
+@import 'founder';
+@import 'contributors';
+@import 'cta';
+@import 'workflow';
+@import 'news';

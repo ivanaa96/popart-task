@@ -1,0 +1,136 @@
+.why-us {
+  padding: 7rem;
+  position: relative;
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0 0 3rem 0;
+
+    .why-us__highlight {
+      color: $color-accent-yellow;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__item {
+    h3 {
+      font-size: 1.375rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: $color-light-gray;
+      line-height: 1.6;
+
+      @media (max-width: $breakpoint-md) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__decoration {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+
+    &--middle-node {
+      top: 26rem;
+      right: 80rem;
+      width: 100px;
+
+      @media (max-width: $breakpoint-lg) {
+        width: 60px;
+        right: 30rem;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
+
+    &--bottom-node {
+      bottom: -1rem;
+      left: -1rem;
+      width: 100px;
+
+      @media (max-width: $breakpoint-lg) {
+        width: 60px;
+        bottom: 0;
+        left: 0;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        width: 40px;
+      }
+    }
+
+    &--right-dots {
+      top: 61%;
+      right: -3rem;
+      transform: translateY(-50%);
+      width: 124px;
+      height: 342px;
+
+      @media (max-width: $breakpoint-lg) {
+        width: 90px;
+      }
+
+      @media (max-width: $breakpoint-md) {
+        width: 60px;
+        right: -1rem;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 5rem 2rem;
+
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 4rem 1.5rem;
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 0.313rem;
+    }
+
+    &__title {
+      font-size: 2.375rem;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 3rem 1rem;
+  }
+}

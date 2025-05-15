@@ -1,0 +1,120 @@
+.news {
+  padding: 4rem 2rem;
+  position: relative;
+
+  &__content {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__arrows {
+    width: 40px;
+    margin: 0 auto 1.5rem;
+    display: block;
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 2.625rem;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: $breakpoint-md) {
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  &__meta {
+    padding-top: 1.5rem;
+  }
+
+  &__date {
+    font-size: 0.875rem;
+    color: $color-light-gray;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  &__headline {
+    font-size: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  &__excerpt {
+    font-size: 1rem;
+    font-weight: 300;
+    color: $color-light-gray;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  &__read-more {
+    color: $color-accent-yellow;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.875rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    background-color: $color-accent-yellow;
+    color: $color-primary;
+    padding: 0.75rem 2rem;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    font-size: 0.875rem;
+    text-decoration: none;
+    display: inline-block;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    position: relative;
+  }
+
+  @media (max-width: $breakpoint-lg) {
+    padding: 3rem 1.5rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 1rem 1.25rem;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 1rem 1rem;
+  }
+}

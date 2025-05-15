@@ -1,0 +1,56 @@
+.about {
+  padding: 6rem;
+  position: relative;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    gap: 6rem;
+
+
+    @media (max-width: $breakpoint-lg) {
+      gap: 4rem;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+
+  }
+
+  &__text-block {
+    flex: 1;
+
+    p {
+      font-size: 1.125rem;
+      font-weight: 200;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      text-align: justify;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  &__highlight {
+    color: $color-accent-yellow;
+  }
+
+  &__node {
+    flex-shrink: 0;
+    width: 90px;
+    margin-top: 1rem;
+  }
+
+  &__arrow {
+    width: 70px;
+  }
+}
