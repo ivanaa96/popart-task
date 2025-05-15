@@ -1,18 +1,18 @@
-@import '_variables.scss';
-@import 'base';
-@import 'utilities';
+@use "base";
+@use "utilities";
+@use "animations";
 
-@import 'site-header';
-@import 'site-footer';
-@import 'social-sidebar';
+@use "site-header";
+@use "site-footer";
+@use "social-sidebar";
 
-@import 'hero';
-@import 'showcase';
-@import 'about';
-@import 'process';
-@import 'why-us';
-@import 'founder';
-@import 'contributors';
-@import 'cta';
-@import 'workflow';
-@import 'news';
+@use "hero";
+@use "showcase";
+@use "about";
+@use "process";
+@use "why-us";
+@use "founder";
+@use "contributors";
+@use "cta";
+@use "workflow";
+@use "news";

@@ -1,16 +1,18 @@
+@use "./_variables.scss" as *;
+
 .why-us {
-  padding: 7rem;
   position: relative;
+  margin-bottom: 3rem;
 
   &__title {
     font-size: 4rem;
     font-weight: 300;
     text-transform: uppercase;
     margin: 0 0 3rem 0;
+  }
 
-    .why-us__highlight {
-      color: $color-accent-yellow;
-    }
+  &__highlight {
+    color: $color-accent-yellow;
   }
 
   &__grid {
@@ -28,10 +30,6 @@
       font-weight: 400;
       margin-bottom: 1rem;
       line-height: 1.4;
-
-      @media (max-width: $breakpoint-md) {
-        text-align: center;
-      }
     }
 
     p {
@@ -39,11 +37,11 @@
       font-weight: 300;
       color: $color-light-gray;
       line-height: 1.6;
-
-      @media (max-width: $breakpoint-md) {
-        text-align: center;
-      }
     }
+  }
+
+  &__break {
+    display: block;
   }
 
   &__decoration {
@@ -52,13 +50,12 @@
     pointer-events: none;
 
     &--middle-node {
-      top: 26rem;
-      right: 80rem;
-      width: 100px;
+      top: 60%;
+      left: 25%;
+      width: 6.25rem;
 
       @media (max-width: $breakpoint-lg) {
-        width: 60px;
-        right: 30rem;
+        width: 3.75rem;
       }
 
       @media (max-width: $breakpoint-md) {
@@ -66,36 +63,36 @@
       }
     }
 
-    &--bottom-node {
-      bottom: -1rem;
-      left: -1rem;
-      width: 100px;
+    &--octagon-right-dots {
+      top: 186rem;
+      right: 0;
+      width: 7.75rem;
+      height: 21.375rem;
 
       @media (max-width: $breakpoint-lg) {
-        width: 60px;
-        bottom: 0;
-        left: 0;
-      }
-
-      @media (max-width: $breakpoint-sm) {
-        width: 40px;
-      }
-    }
-
-    &--right-dots {
-      top: 61%;
-      right: -3rem;
-      transform: translateY(-50%);
-      width: 124px;
-      height: 342px;
-
-      @media (max-width: $breakpoint-lg) {
-        width: 90px;
+        width: 5.625rem;
       }
 
       @media (max-width: $breakpoint-md) {
-        width: 60px;
+        width: 3.75rem;
         right: -1rem;
+      }
+
+      @media (max-width: $breakpoint-sm) {
+        display: none;
+      }
+    }
+
+    &--octagon-icon {
+      position: absolute;
+      top: 0.938rem;
+      right: -10%;
+      width: 3.125rem;
+
+      @media (max-width: $breakpoint-md) {
+        width: 1.875rem;
+        bottom: 1rem;
+        right: 0;
       }
 
       @media (max-width: $breakpoint-sm) {
@@ -128,9 +125,65 @@
       font-size: 2.375rem;
       text-align: center;
     }
+
+    &__item {
+      h3,
+      p {
+        text-align: center;
+      }
+    }
   }
 
   @media (max-width: $breakpoint-sm) {
     padding: 3rem 1rem;
   }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.why-us__item {
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.why-us__item.animate {
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: calc(var(--i, 0) * 0.2s);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.why-us__decoration--middle-node {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    color: $color-accent-yellow;
+  }
+  50% {
+    color: scale($color-accent-yellow, 15%);
+  }
+}
+
+.why-us__highlight {
+  animation: glow 3s ease-in-out infinite;
 }

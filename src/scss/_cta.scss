@@ -1,9 +1,10 @@
+@use "./_variables.scss" as *;
+
 .cta {
-  padding: 5rem 2rem 8rem 2rem;
   position: relative;
+  padding-top: 0.3rem;
 
   &__container {
-    max-width: 1200px;
     margin: 0 auto;
     position: relative;
   }
@@ -27,8 +28,8 @@
   &__arrow {
     position: absolute;
     top: 0;
-    right: 13rem;
-    width: 70px;
+    right: 20rem;
+    width: 4.375rem;
 
     @media (max-width: $breakpoint-md) {
       position: static;
@@ -39,19 +40,23 @@
 
   &__image {
     position: relative;
-    width: 1000px;
-    height: 615px;
+    width: 62.5rem;
+    height: 38.438rem;
 
     @media (max-width: $breakpoint-lg) {
-      width: 650px;
+      width: 40.625rem;
     }
 
     @media (max-width: $breakpoint-md) {
-      width: 450px;
+      width: 28.125rem;
+      height: auto;
+      margin-bottom: 1rem;
     }
 
     @media (max-width: $breakpoint-sm) {
       width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
     }
 
     .cta__cluster-image {
@@ -63,10 +68,10 @@
 
   &__icon {
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     padding: 1rem;
-    border: 2px solid currentColor;
+    border: 0.125rem solid currentColor;
     border-radius: 50%;
     background: transparent;
   }
@@ -75,6 +80,12 @@
     position: absolute;
     top: 52%;
     left: calc(50% + 70px);
-    width: 40px;
+    width: 2.5rem;
+  }
+
+  &__node {
+    position: absolute;
+    top: -7rem;
+    right: -8rem;
   }
 }

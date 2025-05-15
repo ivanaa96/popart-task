@@ -1,29 +1,24 @@
+@use "./_variables.scss" as *;
+
 .about {
-  padding: 6rem;
   position: relative;
+  margin-top: 4rem;
 
   &__content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0;
-    gap: 6rem;
-
-
-    @media (max-width: $breakpoint-lg) {
-      gap: 4rem;
-    }
+    gap: 4rem;
 
     @media (max-width: $breakpoint-md) {
       flex-direction: column;
       text-align: center;
       gap: 3rem;
     }
-
   }
 
-  &__text-block {
-    flex: 1;
+  &__text {
+    flex: 2;
 
     p {
       font-size: 1.125rem;
@@ -34,9 +29,9 @@
     }
   }
 
-  &__title {
+  &__heading {
     font-size: 4rem;
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 2rem;
   }
 
@@ -44,13 +39,28 @@
     color: $color-accent-yellow;
   }
 
-  &__node {
-    flex-shrink: 0;
-    width: 90px;
-    margin-top: 1rem;
+  &__media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    position: relative;
   }
 
-  &__arrow {
-    width: 70px;
+  &__media-arrow {
+    width: 4.375rem;
+    margin: 0 auto;
+  }
+
+  &__media-node {
+    position: absolute;
+    width: 5.625rem;
+    right: -40%;
+
+    @media (max-width: $breakpoint-md) {
+      top: 3.75rem;
+      right: 7%;
+      width: 2.813rem;
+    }
   }
 }

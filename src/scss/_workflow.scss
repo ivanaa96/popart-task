@@ -1,16 +1,9 @@
+@use "./_variables.scss" as *;
+
 .workflow {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: flex-start;
-
-  @media (max-width: $breakpoint-md) {
-    flex-direction: column;
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    flex-direction: column;
-  }
 
   &__header {
     display: flex;
@@ -26,22 +19,6 @@
     font-weight: 200;
     text-transform: uppercase;
     margin: 0;
-
-    @media (max-width: $breakpoint-lg) {
-      font-size: 4.25rem;
-    }
-
-    @media (max-width: $breakpoint-md) {
-      font-size: 1.75rem;
-
-      br {
-        display: inline;
-      }
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      font-size: 1rem;
-    }
   }
 
   &__highlight {
@@ -55,10 +32,12 @@
 
   &__octagon-filled {
     width: 3.75rem;
-    margin-bottom: 5rem;
   }
 
   &__dots-top {
+    position: absolute;
+    right: 0;
+    top: 390.625rem;
   }
 
   &__video {
@@ -74,13 +53,70 @@
     }
   }
 
+  @media (max-width: $breakpoint-lg) {
+    &__header {
+      gap: 0;
+      margin: 0;
+    }
+
+    &__title {
+      font-size: 3rem;
+    }
+
+    &__node {
+      width: 4.5rem;
+    }
+
+    &__octagon-filled {
+      width: 3rem;
+      margin: 1rem;
+    }
+
+    &__dots-top {
+      width: 4.375rem;
+      top: 453rem;
+    }
+  }
+
   @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+
     &__title {
       font-size: 2.625rem;
 
       br {
         display: inline;
       }
+    }
+
+    &__node {
+      width: 4rem;
+    }
+
+    &__octagon-filled {
+      width: 2.5rem;
+    }
+
+    &__dots-top {
+      top: 405rem;
+      width: 3.125rem;
+      right: 0;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__node {
+      width: 3rem;
+    }
+
+    &__octagon-filled {
+      width: 2rem;
+      right: 0;
+      top: 435rem;
     }
   }
 }

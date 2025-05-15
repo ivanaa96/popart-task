@@ -1,18 +1,22 @@
+@use "./_variables.scss" as *;
+
 .hero {
   display: flex;
+  position: relative;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   padding: 6rem 0;
-  height: 580px;
-  overflow: hidden;
-  max-width: 1300px;
 
-  &__heading {
+  &__title {
+    margin-left: auto;
+    margin-right: auto;
     font-size: 6.8rem;
     font-weight: 300;
     line-height: 1.1;
     margin: 0;
+    max-width: 87.5rem;
 
     @media (max-width: $breakpoint-lg) {
       font-size: 5rem;
@@ -23,7 +27,7 @@
     }
 
     @media (max-width: $breakpoint-sm) {
-      font-size: 2.4rem;
+      font-size: 1.4rem;
     }
   }
 
@@ -31,11 +35,15 @@
     color: $color-accent-yellow;
   }
 
+  &__description {
+    margin-left: auto;
+  }
+
   &__text {
     font-size: 1.125rem;
     font-weight: 300;
     color: $color-light-gray;
-    max-width: 600px;
+    max-width: 37.5rem;
 
     @media (max-width: $breakpoint-md) {
       font-size: 1rem;
@@ -43,70 +51,68 @@
   }
 
   &__cta {
+    position: relative;
     background-color: $color-accent-yellow;
     color: $color-primary;
-    padding: 0.75rem 2.5rem;
+    padding: 1rem 4rem;
     border: none;
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
     clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
   }
+}
 
-  .hero__decorations {
+.hero__decorations {
+  position: absolute;
+  pointer-events: none;
+
+  img {
     position: absolute;
-    inset: 0;
-    pointer-events: none;
+  }
 
+  &--octagon-center-top {
+    width: 3.75rem;
+    height: 3.75rem;
+    top: 0;
+    left: 50%;
+    border-radius: 0.313rem;
+    border-width: 0.094rem;
+  }
+
+  &--octagon-near-cta {
+    top: 80%;
+    width: 3.438rem;
+    transform: rotate(15deg);
+  }
+
+  &--node-bottom {
+    top: 70%;
+    left: 33%;
+    width: 6.688rem;
+    z-index: -1;
+  }
+
+  &--arrows-bottom-center {
+    bottom: -1.563rem;
+    left: calc(50% - 60px);
+    width: 3.75rem;
+  }
+
+  &--dots-corner-left {
+    left: 0;
+    width: 3.75rem;
+  }
+
+  @media (max-width: $breakpoint-md) {
     img {
-      position: absolute;
+      transform: scale(0.75);
     }
+  }
 
-    &--center-top {
-      width: 60px;
-      height: 60px;
-      top: 79px;
-      left: 960px;
-      border-radius: 5px;
-      border-width: 1.5px;
-    }
-
-    &--bottom {
-      top: 500px;
-      left: 678.4px;
-      width: 107px;
-    }
-
-    &--near-cta {
-      bottom: 14px;
-      right: 275px;
-      width: 55px;
-      transform: rotate(15deg);
-    }
-
-    &--corner-left {
-      bottom: -160px;
-      left: -18px;
-      width: 60px;
-    }
-
-    &--bottom-center {
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-    }
-
-    @media (max-width: $breakpoint-md) {
-      img {
-        transform: scale(0.75);
-      }
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      img {
-        transform: scale(0.5);
-      }
+  @media (max-width: $breakpoint-sm) {
+    img {
+      transform: scale(0.5);
     }
   }
 }

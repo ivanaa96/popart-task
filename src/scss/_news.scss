@@ -1,27 +1,40 @@
+@use "./_variables.scss" as *;
+
 .news {
-  padding: 4rem 2rem;
   position: relative;
+  margin-top: 3rem;
+  padding-top: 6.5rem;
+  padding-bottom: 3rem;
 
   &__content {
-    max-width: 1300px;
+    max-width: 81.25rem;
     margin: 0 auto;
     position: relative;
   }
 
-  &__icons {
-    display: flex;
-    justify-content: space-between;
+  &__octagon-strip {
+    position: absolute;
+    top: 443.125rem;
+    left: 0;
   }
+
+  &__node {
+    position: absolute;
+    top: 0;
+    right: -10rem;
+  }
+
   &__arrows {
-    width: 40px;
-    margin: 0 auto 1.5rem;
-    display: block;
+    position: absolute;
+    left: 55%;
+    width: 2.5rem;
   }
 
   &__title {
     font-size: 4rem;
     font-weight: 300;
     text-transform: uppercase;
+    margin-top: 3rem;
     margin-bottom: 4rem;
 
     @media (max-width: $breakpoint-md) {
@@ -43,13 +56,12 @@
   &__item {
     display: flex;
     flex-direction: column;
-    text-align: left;
   }
 
   &__image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 0.5rem;
   }
 
   &__meta {
@@ -66,15 +78,16 @@
   &__headline {
     font-size: 1.375rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin: 0;
   }
 
-  &__excerpt {
+  &__text {
     font-size: 1rem;
     font-weight: 300;
     color: $color-light-gray;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    text-align: justify;
   }
 
   &__read-more {
@@ -106,15 +119,43 @@
     position: relative;
   }
 
+  &__decoration-left {
+    position: absolute;
+    width: 4.375rem;
+    bottom: 0;
+    left: -10rem;
+  }
+
+  &__decoration-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 7%;
+  }
+
   @media (max-width: $breakpoint-lg) {
     padding: 3rem 1.5rem;
+
+    &__octagon-strip {
+      width: 1.875rem;
+      top: 483.688rem;
+    }
   }
 
   @media (max-width: $breakpoint-md) {
     padding: 1rem 1.25rem;
+
+    &__octagon-strip {
+      width: 1.875rem;
+      top: 483.688;
+    }
   }
 
   @media (max-width: $breakpoint-sm) {
     padding: 1rem 1rem;
+
+    &__octagon-strip {
+      width: 1.875rem;
+      top: 483.688;
+    }
   }
 }

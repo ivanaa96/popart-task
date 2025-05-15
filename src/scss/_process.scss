@@ -1,6 +1,8 @@
+@use "./_variables.scss" as *;
+
 .process {
   position: relative;
-  padding: 6rem;
+  margin-top: 5rem;
 
   &__timeline {
     max-width: 84rem;
@@ -8,73 +10,45 @@
     height: auto;
     display: block;
     margin: 0 auto;
-
-    @media (max-width: $breakpoint-lg) {
-      max-width: 100%;
-    }
-
-    @media (max-width: $breakpoint-md) {
-      max-width: 90%;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      max-width: 100%;
-    }
   }
 
   &__dots {
     position: absolute;
-    left: -4%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 75px;
-    margin: 0;
-
-    @media (max-width: $breakpoint-md) {
-      width: 45px;
-      left: -8%;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      display: none;
-    }
+    left: 0;
+    top: 150.938rem;
+    width: 4.688rem;
   }
 
-  &__icon {
-    position: absolute;
-    bottom: -10%;
-    right: 0;
-    width: auto;
-    height: auto;
+  @media (max-width: $breakpoint-lg) {
+    padding: 5rem 2rem;
 
-    @media (max-width: $breakpoint-md) {
-      width: 30px;
-      bottom: 1rem;
-      right: 0;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      display: none;
+    &__timeline {
+      max-width: 100%;
     }
   }
 
   @media (max-width: $breakpoint-md) {
     padding: 4rem 1.5rem;
+
+    &__timeline {
+      max-width: 90%;
+    }
+
+    &__dots {
+      width: 2.813rem;
+      left: -8%;
+    }
   }
 
   @media (max-width: $breakpoint-sm) {
     padding: 3rem 1rem;
-  }
 
-  @media (max-width: 1024px) {
-    padding: 4rem 2rem;
-  }
+    &__timeline {
+      max-width: 100%;
+    }
 
-  @media (max-width: 768px) {
-    padding: 3rem 1.5rem;
-  }
-
-  @media (max-width: 480px) {
-    padding: 2rem 1rem;
+    &__dots {
+      display: none;
+    }
   }
 }

@@ -24,7 +24,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/main.css" />
@@ -36,23 +36,30 @@
         alt="PopArt Studio Logo"
         class="site-header__logo"
       />
+
       <nav class="site-header__nav" aria-label="Main navigation">
-        <a href="#">Home</a>
-        <span aria-hidden="true">|</span>
-        <a href="#">Documentation</a>
+        <a href="#" class="site-header__link">Home</a>
+        <span class="site-header__separator">|</span>
+        <a href="#" class="site-header__link">Documentation</a>
       </nav>
     </header>
 
     <aside class="social-sidebar" aria-label="Social media links">
-      <ul>
+      <ul class="social-sidebar__list">
         <li>
           <a
             href="https://github.com"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
+            class="social-sidebar__link"
           >
-            <img src="public/icons/github-icon.svg" alt="" />
+            <img
+              src="public/icons/github-icon.svg"
+              alt=""
+              class="social-sidebar__icon"
+              role="presentation"
+            />
           </a>
         </li>
         <li>
@@ -61,8 +68,14 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Discord"
+            class="social-sidebar__link"
           >
-            <img src="public/icons/gamepad.svg" alt="" />
+            <img
+              src="public/icons/gamepad.svg"
+              alt=""
+              class="social-sidebar__icon"
+              role="presentation"
+            />
           </a>
         </li>
         <li>
@@ -71,8 +84,14 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Stack Overflow"
+            class="social-sidebar__link"
           >
-            <img src="public/icons/stackoverflow-icon.svg" alt="" />
+            <img
+              src="public/icons/stackoverflow-icon.svg"
+              alt=""
+              class="social-sidebar__icon"
+              role="presentation"
+            />
           </a>
         </li>
         <li>
@@ -81,8 +100,14 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Reddit"
+            class="social-sidebar__link"
           >
-            <img src="public/icons/reddit.svg" alt="" />
+            <img
+              src="public/icons/reddit.svg"
+              alt=""
+              class="social-sidebar__icon"
+              role="presentation"
+            />
           </a>
         </li>
         <li>
@@ -91,8 +116,14 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Quora"
+            class="social-sidebar__link"
           >
-            <img src="public/icons/quora-icon.svg" alt="" />
+            <img
+              src="public/icons/quora-icon.svg"
+              alt=""
+              class="social-sidebar__icon"
+              role="presentation"
+            />
           </a>
         </li>
         <li>
@@ -101,8 +132,14 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
+            class="social-sidebar__link"
           >
-            <img src="public/icons/youtube-icon.svg" alt="" />
+            <img
+              src="public/icons/youtube-icon.svg"
+              alt=""
+              class="social-sidebar__icon"
+              role="presentation"
+            />
           </a>
         </li>
       </ul>
@@ -110,47 +147,52 @@
 
     <main class="main-content" id="main-content">
       <section class="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title" class="hero__heading">
+        <img
+          src="public/icons/octagon-outline.svg"
+          class="hero__decorations hero__decorations--octagon-center-top"
+          role="presentation"
+          alt="Octagon outline icon"
+        />
+
+        <h1 id="hero-title" class="hero__title">
           LOREM IPSUM DOLOR SIT AMET
           <span class="hero__highlight">CONSECTETUR.</span>
         </h1>
 
-        <div id="hero-description">
+        <div id="hero-description" class="hero__description">
           <p class="hero__text">
             Lorem ipsum dolor sit amet consectetur. Vestibulum enim aenean purus
             nam quis.
           </p>
-          <button class="hero__cta" aria-label="Join our network">JOIN</button>
-        </div>
-
-        <div class="hero__decorations" aria-hidden="true">
+          <button class="hero__cta" aria-label="Join our network">
+            <span>JOIN</span>
+          </button>
           <img
             src="public/icons/octagon-filled.svg"
-            class="hero__decor--center-top"
+            class="hero__decorations hero__decorations--octagon-near-cta"
             role="presentation"
+            alt="Octagon near cta icon"
           />
           <img
             src="public/icons/node1.svg"
-            class="hero__decor--bottom"
+            class="hero__decorations hero__decorations--node-bottom spin-slow"
             role="presentation"
-          />
-          <img
-            src="public/icons/octagon-outline.svg"
-            class="hero__decor--near-cta"
-            role="presentation"
-          />
-          <img
-            src="public/icons/decor-dots-pink.svg"
-            class="hero__decor--corner-left"
-            role="presentation"
-          />
-          <img
-            src="public/icons/arrows.svg"
-            class="hero__decor--bottom-center"
-            role="presentation"
+            alt="Node bottom icon"
           />
         </div>
+        <img
+          src="public/icons/arrows.svg"
+          class="hero__decorations hero__decorations--arrows-bottom-center"
+          role="presentation"
+          alt="Arrows bottom center icon"
+        />
       </section>
+
+      <img
+        src="public/icons/decor-dots-pink.svg"
+        class="hero__decorations hero__decorations--dots-corner-left"
+        role="presentation"
+      />
 
       <section
         class="showcase"
@@ -159,26 +201,24 @@
       >
         <h2 id="showcase-heading" class="visually-hidden">Showcase Example</h2>
 
-        <div class="showcase__content">
-          <img
-            src="public/images/code-screenshot.jpg"
-            alt="Frontend code snippet demonstrating component structure"
-            class="showcase__image"
-          />
-
-          <img
-            src="public/icons/decor-octagon-strip.svg"
-            alt=""
-            role="presentation"
-            class="showcase__dots"
-          />
-        </div>
+        <img
+          src="public/images/code-screenshot.jpg"
+          alt="Frontend code snippet demonstrating component structure"
+          class="showcase__image"
+        />
       </section>
 
-      <section class="about" id="about" aria-labelledby="about-heading">
+      <img
+        src="public/icons/decor-octagon-strip.svg"
+        alt="Octagon strip icon"
+        role="presentation"
+        class="showcase__dots"
+      />
+
+      <section class="about" id="about" aria-labelledby="about-title">
         <div class="about__content">
-          <div class="about__text-block">
-            <h2 id="about-heading" class="about__title">
+          <div class="about__text">
+            <h2 id="about-title" class="about__heading">
               <span class="about__highlight">IPSUM</span> DOLOR SIT
             </h2>
             <p>
@@ -197,22 +237,29 @@
               aliquet ipsum gravida fames aliquet. Egestas eget in congue augue.
             </p>
           </div>
-
-          <img
-            src="public/icons/arrows.svg"
-            alt=""
-            class="about__arrow"
-            role="presentation"
-          />
-
-          <img
-            src="public/icons/node3.svg"
-            alt=""
-            class="about__node"
-            role="presentation"
-          />
+          <div class="about__media">
+            <img
+              src="public/icons/arrows.svg"
+              alt=""
+              class="about__media-arrow"
+              role="presentation"
+            />
+            <img
+              src="public/icons/node3.svg"
+              alt=""
+              class="about__media-node spin-slow"
+              role="presentation"
+            />
+          </div>
         </div>
       </section>
+
+      <img
+        src="public/icons/decor-dots-orange.svg"
+        alt="Orange dots icon"
+        role="presentation"
+        class="process__dots"
+      />
 
       <section class="process" id="process" aria-labelledby="process-heading">
         <h2 id="process-heading" class="visually-hidden">
@@ -220,23 +267,9 @@
         </h2>
 
         <img
-          src="public/icons/decor-dots-orange.svg"
-          alt=""
-          role="presentation"
-          class="process__dots"
-        />
-
-        <img
           src="public/icons/timeline.svg"
           alt="Timeline showing our development process"
           class="process__timeline"
-        />
-
-        <img
-          src="public/icons/octagon-outline.svg"
-          alt=""
-          role="presentation"
-          class="process__icon"
         />
       </section>
 
@@ -245,49 +278,60 @@
           <span class="why-us__highlight">WHY</span> US?
         </h2>
 
+        <img
+          src="public/icons/octagon-outline.svg"
+          alt="Octagon outline icon"
+          role="presentation"
+          class="why-us__decoration why-us__decoration--octagon-icon"
+        />
+
         <div class="why-us__grid">
-          <article class="why-us__item">
-            <h3>Lorem adipiscing eleifend</h3>
+          <article class="why-us__item" style="--i: 0">
+            <h3>
+              Lorem adipiscing <span class="why-us__break">eleifend</span>
+            </h3>
             <p>
               Tortor habitant turpis eu maecenas id nisi in blandit rhoncus.
               Turpis hac in eu volutpat lorem nullam mattis
             </p>
           </article>
 
-          <article class="why-us__item">
-            <h3>Tristique neque tristique</h3>
+          <article class="why-us__item" style="--i: 1">
+            <h3>
+              Tristique neque <span class="why-us__break">tristique</span>
+            </h3>
             <p>
               Dapibus orci bibendum posuere viverra nibh augue ornare. Dolor sed
               rutrum quam non viverra proin sed nisi.
             </p>
           </article>
 
-          <article class="why-us__item">
-            <h3>Natoque purus adipiscing</h3>
+          <article class="why-us__item" style="--i: 2">
+            <h3>Natoque purus <span class="why-us__break">adipiscing</span></h3>
             <p>
               Pellentesque tempor ante felis leo aenean purus neque sit.
               Scelerisque feugiat aliquam eget imperdiet!
             </p>
           </article>
 
-          <article class="why-us__item">
-            <h3>Ut velit sit</h3>
+          <article class="why-us__item" style="--i: 3">
+            <h3>Ut velit <span class="why-us__break">sit</span></h3>
             <p>
               Dictum amet est quis at aenean neque. Metus viverra vulputate
               faucibus quam sed habitasse auctor
             </p>
           </article>
 
-          <article class="why-us__item">
-            <h3>Nunc id eget</h3>
+          <article class="why-us__item" style="--i: 4">
+            <h3>Nunc id <span class="why-us__break">eget</span></h3>
             <p>
               Luctus metus condimentum tincidunt commodo non facilisis. Quis
               diam eu in platea a purus nisl magna
             </p>
           </article>
 
-          <article class="why-us__item">
-            <h3>Et tempor sit</h3>
+          <article class="why-us__item" style="--i: 5">
+            <h3>Et tempor <span class="why-us__break">sit</span></h3>
             <p>
               In mauris aliquam mauris turpis morbi morbi quis. Adipiscing velit
               mauris netus quisque et tortor massa sit
@@ -297,26 +341,28 @@
 
         <img
           src="public/icons/octagon-group.svg"
-          alt=""
+          alt="Octagon group icon"
           role="presentation"
           class="why-us__decoration why-us__decoration--middle-node"
         />
-        <img
-          src="public/icons/node2.svg"
-          alt=""
-          role="presentation"
-          class="why-us__decoration why-us__decoration--bottom-node"
-        />
-        <img
-          src="public/icons/decor-octagon-grid.svg"
-          alt=""
-          role="presentation"
-          class="why-us__decoration why-us__decoration--right-dots"
-        />
       </section>
+
+      <img
+        src="public/icons/decor-octagon-grid.svg"
+        alt="Octagon grid icon"
+        role="presentation"
+        class="why-us__decoration why-us__decoration--octagon-right-dots"
+      />
 
       <section class="founder" id="founder" aria-labelledby="founder-heading">
         <h2 id="founder-heading" class="visually-hidden">Meet the Founder</h2>
+
+        <img
+          src="public/icons/node2.svg"
+          alt="Node icon"
+          role="presentation"
+          class="founder__top-node spin-slow"
+        />
 
         <img
           src="public/icons/arrows.svg"
@@ -358,13 +404,20 @@
           </div>
 
           <img
-            src="public/icons/octagon-outline.svg"
+            src="public/icons/hexagon.svg"
             alt=""
             role="presentation"
             class="founder__decor founder__decor--corner"
           />
         </div>
       </section>
+
+      <img
+        src="public/icons/decor-dots-pink.svg"
+        alt=""
+        role="presentation"
+        class="contributors__dots-bottom"
+      />
 
       <section
         class="contributors"
@@ -444,24 +497,9 @@
         </div>
 
         <p class="contributors__footer-text">
-          …and <strong>20+</strong> people designing<br />
+          …and 20+ people designing<br />
           the future.
         </p>
-
-        <div class="contributors__footer-icons">
-          <img
-            src="public/icons/decor-dots-pink.svg"
-            alt=""
-            role="presentation"
-            class="contributors__dots-bottom"
-          />
-          <img
-            src="public/icons/node1.svg"
-            alt=""
-            role="presentation"
-            class="contributors__node"
-          />
-        </div>
       </section>
 
       <section class="cta" id="cta" aria-labelledby="cta-heading">
@@ -469,19 +507,26 @@
           Join the Network Call To Action
         </h2>
 
+        <img
+          src="public/icons/arrows.svg"
+          alt=""
+          role="presentation"
+          class="cta__arrow"
+        />
+
+        <img
+          src="public/icons/node1.svg"
+          alt=""
+          role="presentation"
+          class="cta__node spin-slow"
+        />
+
         <div class="cta__container">
           <div class="cta__text">
             <h3 class="cta__heading">
               <span class="cta__highlight">Start Today</span> –<br />
               Join the Network
             </h3>
-
-            <img
-              src="public/icons/arrows.svg"
-              alt=""
-              role="presentation"
-              class="cta__arrow"
-            />
           </div>
 
           <div class="cta__cluster">
@@ -494,6 +539,13 @@
         </div>
       </section>
 
+      <img
+        src="public/icons/decor-dots-orange.svg"
+        alt=""
+        role="presentation"
+        class="workflow__dots-top"
+      />
+
       <section
         class="workflow"
         id="workflow"
@@ -503,7 +555,7 @@
           src="public/icons/node3.svg"
           alt=""
           role="presentation"
-          class="workflow__node"
+          class="workflow__node spin-slow"
         />
         <div>
           <div class="workflow__header">
@@ -518,12 +570,6 @@
               role="presentation"
               class="workflow__octagon-filled"
             />
-            <img
-              src="public/icons/decor-dots-orange.svg"
-              alt=""
-              role="presentation"
-              class="workflow__dots-top"
-            />
           </div>
 
           <div class="workflow__video-container">
@@ -536,17 +582,27 @@
         </div>
       </section>
 
+      <img
+        src="public/icons/decor-octagon-strip.svg"
+        alt=""
+        role="presentation"
+        class="news__octagon-strip"
+      />
+
       <section class="news" id="news" aria-labelledby="news-heading">
-        <div class="news__icons">
-          <img
-            src="public/icons/decor-octagon-strip.svg"
-            alt=""
-            role="presentation"
-          />
-          <img src="public/icons/node4.svg" alt="" role="presentation" />
-        </div>
+        <img
+          src="public/icons/node4.svg"
+          alt=""
+          role="presentation"
+          class="news__node spin-slow"
+        />
+        <img
+          src="public/icons/arrows.svg"
+          alt=""
+          role="presentation"
+          class="news__arrows"
+        />
         <div class="news__content">
-          <img src="public/icons/arrows.svg" alt="" role="presentation" />
           <h2 id="news-heading" class="news__title">LATEST NEWS</h2>
 
           <div class="news__grid">
@@ -559,7 +615,7 @@
               <div class="news__meta">
                 <span class="news__date">13 Feb 2022</span>
                 <h3 class="news__headline">Eu hac a ridiculus velit, ma...</h3>
-                <p class="news__excerpt">
+                <p class="news__text">
                   Vel arcu, cras eget turpis tortor tristique egestas. Volutpat
                   semper proin quisque arcu, cras eget turpis tortor tristique
                   egestas quisqu...
@@ -582,7 +638,7 @@
               <div class="news__meta">
                 <span class="news__date">13 Feb 2022</span>
                 <h3 class="news__headline">Eu hac a ridiculus velit, ma...</h3>
-                <p class="news__excerpt">
+                <p class="news__text">
                   Vel arcu, cras eget turpis tortor tristique egestas. Volutpat
                   semper proin quisque arcu, cras eget turpis tortor tristique
                   egestas quisqu...
@@ -596,18 +652,17 @@
               </div>
             </article>
           </div>
-             <a href="#" class="news__button" aria-label="View all news articles"
+          <a href="#" class="news__button" aria-label="View all news articles"
             >VIEW ALL NEWS</a
           >
         </div>
-
 
         <div class="news__footer">
           <img
             src="public/icons/node2.svg"
             alt=""
             role="presentation"
-            class="news__decoration-left"
+            class="news__decoration-left spin-slow"
           />
           <img
             src="public/icons/arrows.svg"
@@ -627,7 +682,11 @@
       <h2 id="footer-heading" class="visually-hidden">Footer</h2>
 
       <div class="site-footer__content">
-          <img src="public/icons/logo.svg" class="site-footer__logo" alt="PopArt Studio Logo" />
+        <img
+          src="public/icons/logo.svg"
+          class="site-footer__logo"
+          alt="PopArt Studio Logo"
+        />
 
         <nav class="site-footer__nav" aria-label="Footer navigation">
           <ul>

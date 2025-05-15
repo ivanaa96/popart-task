@@ -1,62 +1,39 @@
+@use "./_variables.scss" as *;
+
 .founder {
   position: relative;
-  margin: 8rem 2rem;
-  padding: 5rem;
+  padding-top: 15rem;
+  padding-bottom: 15rem;
 
-  @media (max-width: $breakpoint-lg) {
-    margin: 6rem 1.5rem;
-    padding: 4rem 2rem;
-  }
-
-  @media (max-width: $breakpoint-md) {
-    padding: 3rem 1.25rem;
-    margin: 4rem 1rem;
-  }
-
-  @media (max-width: $breakpoint-sm) {
-    margin: 3rem 0.75rem;
+  &__top-node {
+    position: absolute;
+    top: 0;
+    left: -9.375rem;
   }
 
   &__arrows {
     position: absolute;
-    top: 1rem;
+    top: 10rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 70px;
-
-    @media (max-width: $breakpoint-md) {
-      width: 50px;
-    }
+    width: 4.375rem;
   }
 
   &__content {
-    max-width: 1400px;
-    margin: 20px auto;
+    max-width: 87.5rem;
+    margin: 1.25rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 0.625rem;
     position: relative;
-
-    @media (max-width: $breakpoint-lg) {
-      flex-direction: column;
-      text-align: center;
-      gap: 1.5rem;
-    }
   }
 
   &__media {
     position: relative;
     flex-shrink: 0;
-    width: 350px;
-
-    @media (max-width: $breakpoint-lg) {
-      width: 100%;
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
-    }
+    width: 21.875rem;
 
     .founder__photo {
       width: 100%;
@@ -68,31 +45,20 @@
 
   &__text {
     flex: 1;
-    max-width: 700px;
-
-    @media (max-width: $breakpoint-lg) {
-      max-width: 100%;
-    }
+    max-width: 43.75rem;
   }
 
   &__name {
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 300;
     color: $color-accent-yellow;
     margin-bottom: 0;
-
-    @media (max-width: $breakpoint-md) {
-      font-size: 1.5rem;
-    }
   }
 
   &__title {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
     font-weight: 200;
-    @media (max-width: $breakpoint-md) {
-      font-size: 1rem;
-    }
   }
 
   &__quote {
@@ -102,29 +68,12 @@
     padding-left: 2rem;
     font-weight: 200;
 
-    @media (max-width: $breakpoint-md) {
-      padding-left: 1.5rem;
-      font-size: 0.95rem;
-    }
-
-    .founder__quote-icon {
+    &-icon {
       position: absolute;
-      left: -17px;
-      top: -45px;
+      left: -1.063rem;
+      top: -2.813rem;
       font-size: 5rem;
       color: $color-purple-muted;
-
-      @media (max-width: $breakpoint-md) {
-        font-size: 3.5rem;
-        left: -10px;
-        top: -35px;
-      }
-
-      @media (max-width: $breakpoint-sm) {
-        font-size: 2.5rem;
-        left: -8px;
-        top: -30px;
-      }
     }
   }
 
@@ -132,39 +81,93 @@
     position: absolute;
 
     &--cluster {
-      position: absolute;
-      left: 270px;
-      top: 245px;
-      width: 150px;
-      transition: all 0.3s ease;
+      right: -3.125rem;
+      bottom: -0.188rem;
+      width: 6.25rem;
       pointer-events: none;
-      z-index: 0;
-
-      @media (max-width: $breakpoint-lg) {
-        left: auto;
-        right: 1rem;
-      }
-
-      @media (max-width: $breakpoint-md) {
-        width: 90px;
-        right: 1rem;
-      }
-
-      @media (max-width: $breakpoint-sm) {
-        width: 60px;
-      }
     }
 
     &--corner {
-      bottom: -50px;
-      right: 0;
-      width: 60px;
+      bottom: -12rem;
+      right: -5rem;
+      width: 3.75rem;
+    }
+  }
 
-      @media (max-width: $breakpoint-md) {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease;
-      }
+  @media (max-width: $breakpoint-lg) {
+    margin: 6rem 1.5rem;
+    padding: 4rem 2rem;
+
+    &__content {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+
+    &__media {
+      width: 100%;
+      max-width: 18.75rem;
+      margin: 0 auto;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+
+    &__decor--cluster {
+      right: 1rem;
+    }
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: 3rem 1.25rem;
+    margin: 4rem 1rem;
+
+    &__name {
+      font-size: 1.5rem;
+    }
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__quote {
+      padding-left: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    &__quote-icon {
+      font-size: 3.5rem;
+      left: -0.625rem;
+      top: -2.188rem;
+    }
+
+    &__arrows {
+      width: 3.125rem;
+    }
+
+    &__decor--cluster {
+      width: 5.625rem;
+    }
+
+    &__decor--corner {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    margin: 3rem 0.75rem;
+
+    &__quote-icon {
+      font-size: 2.5rem;
+      left: -0.5rem;
+      top: -1.875rem;
+    }
+
+    &__decor--cluster {
+      width: 3.75rem;
     }
   }
 }
