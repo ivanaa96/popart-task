@@ -4,7 +4,8 @@ This is a frontend project built with HTML5, SCSS (Sass), JavaScript, and Gulp. 
 
 ## Requirements
 
-- Node.js and npm installed
+- Node v20
+- Npm installed
 - Gulp CLI (optional but recommended)
 
 ## Getting Started
